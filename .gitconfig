@@ -1,0 +1,27 @@
+
+[user]
+	name = saccharineboi
+	email = saccharineboi@gmail.com
+	signingkey = 693EAD5051429D3F74D9F415869B4A61D04FAD71
+[core]
+	editor = vim
+[init]
+	defaultBranch = main
+[diff]
+	tool = vimdiff
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	sw = switch
+	me = merge
+	fe = fetch
+	res = restore
+	rem = remote
+	reb = rebase
+	unstage = restore --staged
+[commit]
+	gpgsign = true
+[pull]
+	rebase = false
