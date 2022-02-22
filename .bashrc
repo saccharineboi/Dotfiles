@@ -38,3 +38,6 @@ export GPG_TTY=$(tty)
 
 # set vi key-bindings
 set -o vi
+
+# enable multi-threaded compilation
+alias make='make -j4'
