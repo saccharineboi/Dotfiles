@@ -40,4 +40,4 @@ export GPG_TTY=$(tty)
 set -o vi
 
 # enable multi-threaded compilation
-alias make='make -j4'
+alias make='make -j6'
