@@ -41,3 +41,6 @@ set -o vi
 
 # enable multi-threaded compilation
 alias make='make -j6'
+
+# configure chromium for webgpu development
+alias chromium=chromium-snapshot-bin --explicity-allowed-ports=6000
