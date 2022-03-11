@@ -43,4 +43,4 @@ set -o vi
 alias make='make -j6'
 
 # configure chromium for webgpu development
-alias chromium=chromium-snapshot-bin --explicity-allowed-ports=6000
+alias chromium='chromium-snapshot-bin --explicitly-allowed-ports=6000,6666'
