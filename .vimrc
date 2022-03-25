@@ -47,9 +47,6 @@ abbr dd ////////////////////////////////////////
 " view man pages in another panel
 runtime! ftplugin/man.vim
 
-" extension stuff
-execute pathogen#infect()
-
 " tags file for C/C++ programa
 set tags=~/.tags
 
