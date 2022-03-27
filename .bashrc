@@ -29,7 +29,8 @@ alias fgrep='fgrep --color=auto'
 # prepare the environment
 export EDITOR=vi
 export VISUAL=vi
-export TERM=xterm-256color
+export TERM=xfce
+export COLORTERM=24bit
 export PAGER=most
 export PS1="[\[\033[1;32m\]\u \[\033[1;33m\]{\j} \[\033[1;36m\]\W\[\033[1;00m\]]\$ "
 
