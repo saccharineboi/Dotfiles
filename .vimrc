@@ -58,6 +58,7 @@ hi Normal guibg=NONE ctermbg=NONE
 set cursorline
 hi CursorLine ctermfg=None ctermbg=Black cterm=bold
 hi CursorLineNr ctermfg=None ctermbg=Black cterm=bold
+hi StatusLine ctermfg=White ctermbg=Black cterm=bold
 
 " switch buffers using shift and tab
 nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
