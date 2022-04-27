@@ -52,7 +52,6 @@ set tags=~/.tags
 
 " theme
 syntax enable
-colorscheme nord
 set bg=dark
 hi Normal guibg=NONE ctermbg=NONE
 set cursorline
