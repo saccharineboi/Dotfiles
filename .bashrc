@@ -35,9 +35,6 @@ export PS1="[\[\033[1;32m\]\u \[\033[1;33m\]{\j} \[\033[1;36m\]\W\[\033[1;00m\]]
 # fix git's gpg signing problem
 export GPG_TTY=$(tty)
 
-# set vi key-bindings
-set -o vi
-
 # enable multi-threaded compilation
 alias make='make -j6'
 
