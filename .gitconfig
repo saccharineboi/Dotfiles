@@ -21,6 +21,7 @@
 	rem = remote
 	reb = rebase
 	unstage = restore --staged
+	last = log -1 -p --stat
 [commit]
 	gpgsign = true
 [pull]
