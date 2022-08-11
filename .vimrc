@@ -51,7 +51,9 @@ runtime! ftplugin/man.vim
 set tags=~/.tags
 
 " theme
+packadd! dracula
 syntax enable
+colorscheme dracula
 set bg=dark
 hi Normal guibg=NONE ctermbg=NONE
 set cursorline
