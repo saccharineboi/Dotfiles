@@ -30,7 +30,12 @@ alias fgrep='fgrep --color=auto'
 export EDITOR=vi
 export VISUAL=vi
 export PAGER=most
-export PS1="[\[\033[1;32m\]\u \[\033[1;33m\]{\j} \[\033[1;36m\]\W\[\033[1;00m\]]\$ "
+
+if [ $USER == "root" ]; then
+    export PS1="[\[\033[1;31m\]\u \[\033[1;33m\]{\j} \[\033[1;36m\]\W\[\033[1;00m\]]\$ "
+else
+    export PS1="[\[\033[1;32m\]\u \[\033[1;33m\]{\j} \[\033[1;36m\]\W\[\033[1;00m\]]\$ "
+fi
 
 # fix git's gpg signing problem
 export GPG_TTY=$(tty)
