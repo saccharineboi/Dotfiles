@@ -43,8 +43,8 @@ export GPG_TTY=$(tty)
 # enable multi-threaded compilation
 alias make='make -j6'
 
-# configure chromium for webgpu development
-alias chromium='chromium-snapshot-bin --explicitly-allowed-ports=6000,6666'
-
 # update tags file
 alias update-tags="ctags -o $HOME/.tags -R /usr/include /usr/local/include $HOME/Desktop"
+
+# enable dark mode in QT apps
+export QT_STYLE_OVERRIDE=kvantum
