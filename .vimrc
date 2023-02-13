@@ -33,6 +33,9 @@ if has('syntax') && has('eval')
   packadd! matchit
 endif
 
+" pathogen
+execute pathogen#infect()
+
 " custom stuff
 set number relativenumber
 set expandtab
@@ -43,6 +46,7 @@ set hidden
 
 " comment line for source code
 abbr dd ////////////////////////////////////////
+abbr ee ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 " view man pages in another panel
 runtime! ftplugin/man.vim
@@ -67,3 +71,10 @@ nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :wri
 
 " close the current buffer without closing window
 command! Bd bp|bd #
+
+" automatically make views
+augroup remember_folds
+    autocmd!
+    autocmd BufWinLeave *.* mkview
+    autocmd BufWinEnter *.* silent! loadview
+augroup END
