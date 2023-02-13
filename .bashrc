@@ -41,7 +41,7 @@ fi
 export GPG_TTY=$(tty)
 
 # enable multi-threaded compilation
-alias make='make -j6'
+alias make='make -j4'
 
 # update tags file
 alias update-tags="ctags -o $HOME/.tags -R /usr/include /usr/local/include $HOME/Desktop"
