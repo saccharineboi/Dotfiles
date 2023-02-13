@@ -1,14 +1,14 @@
-
 [user]
 	name = saccharineboi
 	email = saccharineboi@gmail.com
-	signingkey = 693EAD5051429D3F74D9F415869B4A61D04FAD71
+	signingkey = 3B4AFFEC5A473117A6FCA4CDACCD4519EAC53B22
 [core]
 	editor = vim
 [init]
 	defaultBranch = main
 [diff]
 	tool = vimdiff
+	submodule = log
 [alias]
 	co = checkout
 	br = branch
