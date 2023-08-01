@@ -1,7 +1,7 @@
 [user]
 	name = saccharineboi
 	email = saccharineboi@gmail.com
-	signingkey = 3B4AFFEC5A473117A6FCA4CDACCD4519EAC53B22
+	signingkey = E1DBADC10AA644734B7A48CE89F2797D98FAB451
 [core]
 	editor = vim
 [init]
