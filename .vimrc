@@ -43,6 +43,8 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set hidden
+set noautoindent
+set nosmartindent
 
 " comment line for source code
 abbr dd ////////////////////////////////////////
