@@ -79,3 +79,15 @@ augroup remember_folds
     autocmd BufWinLeave *.* mkview
     autocmd BufWinEnter *.* silent! loadview
 augroup END
+
+" enable auto-completion
+let g:ale_linters = {
+\   'lua': ['lua-language-server'],
+\   'python': ['pylsp'],
+\   'javascript': ['tsserver'],
+\   'typescript': ['tsserver'],
+\   'c': ['clangd'],
+\   'cpp': ['clangd'],
+\}
+
+let g:ale_completion_enabled = 1
