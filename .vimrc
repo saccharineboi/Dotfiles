@@ -86,8 +86,9 @@ let g:ale_linters = {
 \   'python': ['pylsp'],
 \   'javascript': ['tsserver'],
 \   'typescript': ['tsserver'],
-\   'c': ['clangd'],
-\   'cpp': ['clangd'],
+\   'c': ['gcc'],
+\   'cpp': ['gcc'],
 \}
 
 let g:ale_completion_enabled = 1
+let g:airline#extensions#ale#enabled = 1
