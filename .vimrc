@@ -90,5 +90,93 @@ let g:ale_linters = {
 \   'cpp': ['gcc'],
 \}
 
-let g:ale_completion_enabled = 1
+" only run the manually specified linters
+let g:ale_linters_explicit = 1
+
+" additional arguments for gcc and g++
+let g:ale_c_cc_options = '-std=c99' .
+\ ' -Wall' .
+\ ' -Wextra' .
+\ ' -Wpedantic' .
+\ ' -Wfloat-equal' .
+\ ' -Wundef' .
+\ ' -Wshadow' .
+\ ' -Wpointer-arith' .
+\ ' -Wcast-align' .
+\ ' -Wwrite-strings' .
+\ ' -Wswitch-enum' .
+\ ' -Wcast-qual' .
+\ ' -Wconversion' .
+\ ' -Wduplicated-cond' .
+\ ' -Wduplicated-branches' .
+\ ' -Wformat-nonliteral' .
+\ ' -Wformat-security' .
+\ ' -Wformat-y2k' .
+\ ' -Wformat=2' .
+\ ' -Wno-unused-parameter' .
+\ ' -Wunused' .
+\ ' -Winvalid-pch' .
+\ ' -Wlogical-op' .
+\ ' -Wmissing-declarations' .
+\ ' -Wmissing-field-initializers' .
+\ ' -Wmissing-format-attribute' .
+\ ' -Wmissing-include-dirs' .
+\ ' -Wmissing-noreturn' .
+\ ' -Wpacked' .
+\ ' -Wredundant-decls' .
+\ ' -Wstack-protector' .
+\ ' -Wdisabled-optimization' .
+\ ' -Wsign-conversion' .
+\ ' -Wsign-promo' .
+\ ' -Wstrict-aliasing=2' .
+\ ' -Wstrict-overflow=2' .
+\ ' -Wno-suggest-attribute=format'
+
+let g:ale_cpp_cc_options = '-std=c++20' .
+\ ' -Wall' .
+\ ' -Wextra' .
+\ ' -Wpedantic' .
+\ ' -Wfloat-equal' .
+\ ' -Wundef' .
+\ ' -Wshadow' .
+\ ' -Wpointer-arith' .
+\ ' -Wcast-align' .
+\ ' -Wwrite-strings' .
+\ ' -Wswitch-enum' .
+\ ' -Wcast-qual' .
+\ ' -Wconversion' .
+\ ' -Wduplicated-cond' .
+\ ' -Wduplicated-branches' .
+\ ' -Wnon-virtual-dtor' .
+\ ' -Woverloaded-virtual' .
+\ ' -Wold-style-cast' .
+\ ' -Wformat-nonliteral' .
+\ ' -Wformat-security' .
+\ ' -Wformat-y2k' .
+\ ' -Wformat=2' .
+\ ' -Wno-unused-parameter' .
+\ ' -Wunused' .
+\ ' -Winvalid-pch' .
+\ ' -Wlogical-op' .
+\ ' -Wmissing-declarations' .
+\ ' -Wmissing-field-initializers' .
+\ ' -Wmissing-format-attribute' .
+\ ' -Wmissing-include-dirs' .
+\ ' -Wmissing-noreturn' .
+\ ' -Wpacked' .
+\ ' -Wredundant-decls' .
+\ ' -Wstack-protector' .
+\ ' -Wstrict-null-sentinel' .
+\ ' -Wdisabled-optimization' .
+\ ' -Wsign-conversion' .
+\ ' -Wsign-promo' .
+\ ' -Wstrict-aliasing=2' .
+\ ' -Wstrict-overflow=2' .
+\ ' -Wno-suggest-attribute=format'
+
+let g:ale_completion_enabled = 0
 let g:airline#extensions#ale#enabled = 1
+
+" move between errors
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
