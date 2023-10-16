@@ -174,7 +174,7 @@ let g:ale_cpp_cc_options = '-std=c++20' .
 \ ' -Wstrict-overflow=2' .
 \ ' -Wno-suggest-attribute=format'
 
-let g:ale_completion_enabled = 0
+let g:ale_disable_lsp = 1
 let g:airline#extensions#ale#enabled = 1
 
 " move between errors
@@ -342,4 +342,4 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
-let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-css', 'coc-git', 'coc-cmake', 'coc-docker', 'coc-eslint', 'coc-git', 'coc-glslx', 'coc-html', 'coc-lua', 'coc-lightbulb', 'coc-tsserver']
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-css', 'coc-cmake', 'coc-docker', 'coc-eslint', 'coc-glslx', 'coc-html', 'coc-lua', 'coc-lightbulb', 'coc-tsserver']
