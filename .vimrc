@@ -33,9 +33,6 @@ if has('syntax') && has('eval')
   packadd! matchit
 endif
 
-" pathogen
-execute pathogen#infect()
-
 " custom stuff
 set number relativenumber
 set expandtab
@@ -342,4 +339,4 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
-let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-css', 'coc-cmake', 'coc-docker', 'coc-eslint', 'coc-glslx', 'coc-html', 'coc-lua', 'coc-lightbulb', 'coc-tsserver', 'coc-pyright', 'coc-sh', 'coc-markdownlint']
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-css', 'coc-cmake', 'coc-docker', 'coc-eslint', 'coc-html', 'coc-lua', 'coc-lightbulb', 'coc-tsserver', 'coc-pyright', 'coc-sh', 'coc-markdownlint']
