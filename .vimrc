@@ -77,6 +77,8 @@ augroup remember_folds
     autocmd BufWinEnter *.* silent! loadview
 augroup END
 
+set ttyfast
+
 " enable auto-completion
 let g:ale_linters = {
 \   'lua': ['lua-language-server'],
@@ -89,6 +91,8 @@ let g:ale_linters = {
 
 " only run the manually specified linters
 let g:ale_linters_explicit = 1
+
+let g:LargeFile = 0.1
 
 " additional arguments for gcc and g++
 let g:ale_c_cc_options = '-std=c99' .
