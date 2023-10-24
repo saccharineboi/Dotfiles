@@ -61,7 +61,10 @@ alias make='make -j4'
 alias update-tags="ctags -o $HOME/.tags -R /usr/include /usr/local/include $HOME/Desktop"
 
 # enable dark mode in QT apps
-export QT_STYLE_OVERRIDE=kvantum
+export QT_STYLE_OVERRIDE=Breeze
+
+# use ncurses for vlc in terminal
+alias vlc='vlc -I ncurses'
 
 # shared libraries of projects
 export LD_LIBRARY_PATH=~/Desktop/Poe/lib/linux64
