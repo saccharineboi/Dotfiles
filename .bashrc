@@ -41,8 +41,8 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
 # prepare the environment
-export EDITOR=vi
-export VISUAL=vi
+export EDITOR=vim
+export VISUAL=view
 export PAGER=most
 
 if [ $USER == "root" ]; then
