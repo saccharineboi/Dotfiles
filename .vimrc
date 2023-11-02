@@ -133,7 +133,7 @@ let g:ale_c_cc_options = '-std=c99' .
 \ ' -Wstrict-overflow=2' .
 \ ' -Wno-suggest-attribute=format'
 
-let g:ale_cpp_cc_options = '-std=c++20' .
+let g:ale_cpp_cc_options = '-std=c++23' .
 \ ' -Wall' .
 \ ' -Wextra' .
 \ ' -Wpedantic' .
