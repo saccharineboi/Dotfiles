@@ -67,4 +67,6 @@ export QT_STYLE_OVERRIDE=Breeze
 alias vlc='vlc -I ncurses'
 
 # shared libraries of projects
-export LD_LIBRARY_PATH=~/Desktop/Poe/lib/linux64
+export LD_LIBRARY_PATH=~/Desktop/Poe/lib
+export ENABLE_VULKAN_RENDERDOC_CAPTURE=1
+export RENDERDOC_HOOK_EGL=1
