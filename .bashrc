@@ -68,5 +68,5 @@ alias vlc='vlc -I ncurses'
 
 # shared libraries of projects
 export LD_LIBRARY_PATH=~/Desktop/Poe/lib
-export ENABLE_VULKAN_RENDERDOC_CAPTURE=1
-export RENDERDOC_HOOK_EGL=1
+export ENABLE_VULKAN_RENDERDOC_CAPTURE=0
+export RENDERDOC_HOOK_EGL=0
