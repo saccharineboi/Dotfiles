@@ -24,7 +24,6 @@ alias ls='ls -B --color=auto'
 alias lh='ls -d .[!.]* 2> /dev/null'
 alias lb='ls -d *~ .[!.]*~ 2> /dev/null'
 alias ll='ls -lh'
-alias ld='ls -ld'
 alias lr='ll -R'
 
 # safety aliases
@@ -67,6 +66,9 @@ export QT_STYLE_OVERRIDE=Breeze
 alias vlc='vlc -I ncurses'
 
 # shared libraries of projects
-export LD_LIBRARY_PATH=~/Desktop/Poe/lib
+export LD_LIBRARY_PATH=~/Desktop/Poe/lib:~/Desktop/Hades/Lib
 export ENABLE_VULKAN_RENDERDOC_CAPTURE=0
 export RENDERDOC_HOOK_EGL=0
+
+# pico
+export PICO_SDK_PATH=/usr/share/pico-sdk
