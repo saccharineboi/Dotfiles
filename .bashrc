@@ -72,3 +72,6 @@ export RENDERDOC_HOOK_EGL=0
 
 # pico
 export PICO_SDK_PATH=/usr/share/pico-sdk
+
+# disable accidental writes
+set -o noclobber

@@ -42,6 +42,7 @@ set shiftwidth=4
 set hidden
 set noautoindent
 set nosmartindent
+set cindent
 
 " comment line for source code
 abbr dd ////////////////////////////////////////
@@ -92,7 +93,7 @@ let g:ale_linters = {
 " only run the manually specified linters
 let g:ale_linters_explicit = 1
 
-let g:LargeFile = 0.1
+let g:LargeFile = 100
 
 let g:ale_disable_lsp = 1
 let g:airline#extensions#ale#enabled = 1
@@ -262,4 +263,4 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
-let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-css', 'coc-cmake', 'coc-docker', 'coc-eslint', 'coc-html', 'coc-lua', 'coc-lightbulb', 'coc-tsserver', 'coc-pyright', 'coc-sh', 'coc-markdownlint']
+let g:coc_global_extensions = ['coc-eslint', 'coc-lua', 'coc-tsserver' ]
