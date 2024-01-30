@@ -80,28 +80,6 @@ augroup END
 
 set ttyfast
 
-" enable auto-completion
-let g:ale_linters = {
-\   'lua': ['lua-language-server'],
-\   'python': ['pylsp'],
-\   'javascript': ['tsserver'],
-\   'typescript': ['tsserver'],
-\   'c': ['gcc'],
-\   'cpp': ['g++'],
-\}
-
-" only run the manually specified linters
-let g:ale_linters_explicit = 1
-
-let g:LargeFile = 100
-
-let g:ale_disable_lsp = 1
-let g:airline#extensions#ale#enabled = 1
-
-" move between errors
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
-
 " May need for Vim (not Neovim) since coc.nvim calculates byte offset by count
 " utf-8 byte sequence
 set encoding=utf-8
@@ -263,4 +241,4 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
-let g:coc_global_extensions = ['coc-eslint', 'coc-lua', 'coc-tsserver' ]
+let g:coc_global_extensions = ['coc-eslint', 'coc-lua', 'coc-tsserver', 'coc-clangd', 'coc-html', 'coc-css', 'coc-cmake' ]
