@@ -25,6 +25,7 @@ alias lh='ls -d .[!.]* 2> /dev/null'
 alias lb='ls -d *~ .[!.]*~ 2> /dev/null'
 alias ll='ls -lh'
 alias lr='ll -R'
+alias less='less -R'
 
 # safety aliases
 alias cp='cp -i'
