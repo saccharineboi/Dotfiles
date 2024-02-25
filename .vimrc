@@ -71,6 +71,9 @@ nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :wri
 " close the current buffer without closing window
 command! Bd bp|bd #
 
+" add syntax highlighting for vulkan
+au BufRead,BufNewFile *.cpp so ~/.vim/syntax/vulkan.vim
+
 " automatically make views
 augroup remember_folds
     autocmd!
