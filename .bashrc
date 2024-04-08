@@ -71,8 +71,15 @@ export LD_LIBRARY_PATH=~/Desktop/Poe/lib:~/Desktop/Hades/Lib/hwinfo
 export ENABLE_VULKAN_RENDERDOC_CAPTURE=0
 export RENDERDOC_HOOK_EGL=0
 
-# pico
+# add pico sdk to a separate path
 export PICO_SDK_PATH=/usr/share/pico-sdk
 
 # disable accidental writes
 set -o noclobber
+
+# add slang to PATH
+export PATH=$PATH:$HOME/Slang/bin/linux-x64/release
+
+# add android stuff to PATH
+export ANDROID_HOME=$HOME/Android/Sdk/
+export JAVA_HOME=/opt/android-studio/jbr/
