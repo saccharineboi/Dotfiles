@@ -4,6 +4,7 @@
 	signingkey = B413A9DEB37967E59FC2E5FE887EF670CB89FD78
 [core]
 	editor = vim
+    symlinks = true
 [init]
 	defaultBranch = main
 [diff]
