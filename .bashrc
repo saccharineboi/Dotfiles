@@ -77,7 +77,7 @@ export PICO_SDK_PATH=/usr/share/pico-sdk
 set -o noclobber
 
 # add slang to PATH
-export PATH=$PATH:$HOME/Slang/bin/linux-x64/release
+export PATH=$PATH:$HOME/Slang/bin
 
 # add android stuff to PATH
 export ANDROID_HOME=$HOME/Android/Sdk/
