@@ -81,11 +81,27 @@ augroup remember_folds
     autocmd BufWinEnter *.* silent! loadview
 augroup END
 
+" performance
 set ttyfast
+
+" number the tabs
+set tabline=%!MyTabLine()
+function! MyTabLine()
+  let s = ''
+  for i in range(tabpagenr('$'))
+    let s .= '%' . (i + 1) . 'T'
+    let s .= (i == tabpagenr() - 1) ? '%#TabLineSel#' : '%#TabLine#'
+    let s .= '[' . (i + 1) . '] '
+    let bufnr = tabpagebuflist(i + 1)[0]
+    let s .= fnamemodify(bufname(bufnr), ':t') . ' $ '
+  endfor
+  return s
+endfunction
 
 " May need for Vim (not Neovim) since coc.nvim calculates byte offset by count
 " utf-8 byte sequence
 set encoding=utf-8
+
 " Some servers have issues with backup files, see #649
 set nobackup
 set nowritebackup
