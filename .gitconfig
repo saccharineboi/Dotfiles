@@ -1,7 +1,7 @@
 [user]
 	name = omar
-	email = omar_huseynov@outlook.com
-	signingkey = DA4AE907C247E821940389132C1EF49CAE4164AF
+    email = saccharineboi@gmail.com
+	signingkey = 4F86E01E141499FF6DA92A998C1706A4C623BD97
 [core]
 	editor = vim
     symlinks = true
