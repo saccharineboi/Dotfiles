@@ -43,7 +43,7 @@ alias fgrep='fgrep --color=auto'
 # prepare the environment
 export EDITOR=vim
 export VISUAL=view
-export PAGER=most
+export PAGER=less
 
 if [ $USER == "root" ]; then
     export PS1="[\[\033[1;31m\]\u \[\033[1;33m\]{\j} \[\033[1;36m\]\W\[\033[1;00m\]]\$ "
@@ -58,13 +58,10 @@ export GPG_TTY=$(tty)
 alias make='make -j4'
 
 # update tags file
-alias update-tags="ctags -o $HOME/.tags -R /usr/include /usr/local/include $HOME/Desktop"
+alias update-tags="ctags -o $HOME/.tags -R /usr/include /usr/local/include"
 
 # enable dark mode in QT apps
 export QT_STYLE_OVERRIDE=Breeze
-
-# use ncurses for vlc in terminal
-alias vlc='vlc -I ncurses'
 
 # shared libraries of projects
 export ENABLE_VULKAN_RENDERDOC_CAPTURE=0
@@ -78,7 +75,3 @@ set -o noclobber
 
 # add slang to PATH
 export PATH=$PATH:$HOME/Slang/bin
-
-# add android stuff to PATH
-export ANDROID_HOME=$HOME/Android/Sdk/
-export JAVA_HOME=/opt/android-studio/jbr/
