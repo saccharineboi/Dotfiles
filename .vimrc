@@ -57,6 +57,7 @@ set tags=~/.tags
 " theme
 syntax enable
 colorscheme dracula
+let g:airline_theme='dracula'
 set bg=dark
 hi Normal guibg=NONE ctermbg=NONE
 set cursorline
@@ -70,9 +71,6 @@ nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :wri
 
 " close the current buffer without closing window
 command! Bd bp|bd #
-
-" add syntax highlighting for vulkan
-au BufRead,BufNewFile *.cpp so ~/.vim/syntax/vulkan.vim
 
 " automatically make views
 augroup remember_folds
@@ -260,4 +258,4 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
-let g:coc_global_extensions = ['coc-eslint', 'coc-tsserver', 'coc-clangd', 'coc-html', 'coc-css', 'coc-cmake', 'coc-rust-analyzer' ]
+let g:coc_global_extensions = ['coc-eslint', 'coc-tsserver', 'coc-clangd', 'coc-html', 'coc-css', 'coc-cmake', 'coc-rust-analyzer', 'coc-pyright' ]
