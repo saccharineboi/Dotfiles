@@ -79,3 +79,12 @@ set -o noclobber
 
 # add slang (shading language) to PATH
 export PATH=$PATH:$HOME/Slang/bin
+
+# make man pages beautiful
+export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
+
+# make --help beautiful
+alias bathelp='bat --plain --language=help'
+help() {
+    "$@" --help 2>&1 | bathelp
+}
