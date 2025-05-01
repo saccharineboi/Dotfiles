@@ -20,7 +20,7 @@ shopt -s checkwinsize
 
 # convenience aliases
 alias cls='clear'
-alias ls='ls -B --color=auto'
+alias ls='lsd'
 alias lh='ls -d .[!.]* 2> /dev/null'
 alias lb='ls -d *~ .[!.]*~ 2> /dev/null'
 alias ll='ls -lh'
@@ -40,11 +40,15 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
+# colorful diff
+alias diff='diff --color=auto'
+
 # prepare the environment
 export EDITOR=vim
 export VISUAL=view
 export PAGER=less
 
+# nice-looking prompt
 if [ $USER == "root" ]; then
     export PS1="[\[\033[1;31m\]\u \[\033[1;33m\]{\j} \[\033[1;36m\]\W\[\033[1;00m\]]\$ "
 else
@@ -63,7 +67,7 @@ alias update-tags="ctags -o $HOME/.tags -R /usr/include /usr/local/include"
 # enable dark mode in QT apps
 export QT_STYLE_OVERRIDE=Breeze
 
-# shared libraries of projects
+# renderdoc stuff
 export ENABLE_VULKAN_RENDERDOC_CAPTURE=0
 export RENDERDOC_HOOK_EGL=0
 
@@ -73,5 +77,5 @@ export PICO_SDK_PATH=/usr/share/pico-sdk
 # disable accidental writes
 set -o noclobber
 
-# add slang to PATH
+# add slang (shading language) to PATH
 export PATH=$PATH:$HOME/Slang/bin
