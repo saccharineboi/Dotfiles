@@ -43,6 +43,9 @@ alias fgrep='fgrep --color=auto'
 # colorful diff
 alias diff='diff --color=auto'
 
+# default options for gdb
+alias gdb='gdb -q --tui'
+
 # prepare the environment
 export EDITOR=vim
 export VISUAL=view
