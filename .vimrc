@@ -65,9 +65,42 @@ hi CursorLine ctermfg=None ctermbg=Black cterm=bold
 hi CursorLineNr ctermfg=None ctermbg=Black cterm=bold
 hi StatusLine ctermfg=White ctermbg=Black cterm=bold
 
+" Enable GDB debugging
+packadd! termdebug
+let g:termdebug_config = {}
+let g:termdebug_config['winbar'] = 0
+let g:termdebug_config['evaluate_in_popup'] = v:true
+let g:termdebug_config['wide'] = 1
+
 " switch buffers using shift and tab
-nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
-nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
+nnoremap <silent> <tab> :call <SID>CycleBuffer(1)<CR>
+nnoremap <silent> <s-tab> :call <SID>CycleBuffer(-1)<CR>
+
+function! s:CycleBuffer(direction)
+  let l:buffers = filter(range(1, bufnr('$')), 'buflisted(v:val)')
+
+  let l:valid_buffers = []
+  for l:buf in l:buffers
+    if getbufvar(l:buf, '&buftype') !=# 'terminal'
+      call add(l:valid_buffers, l:buf)
+    endif
+  endfor
+
+  if len(l:valid_buffers) < 2
+    return
+  endif
+
+  let l:current_index = index(l:valid_buffers, bufnr('%'))
+
+  if l:current_index == -1
+    let l:current_index = 0
+  endif
+
+  let l:num_valid = len(l:valid_buffers)
+  let l:next_index = (l:current_index + a:direction + l:num_valid) % l:num_valid
+
+  execute 'buffer' l:valid_buffers[l:next_index]
+endfunction
 
 " close the current buffer without closing window
 command! Bd bp|bd #
@@ -258,4 +291,4 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
-let g:coc_global_extensions = ['coc-eslint', 'coc-tsserver', 'coc-clangd', 'coc-html', 'coc-css', 'coc-cmake', 'coc-rust-analyzer', 'coc-pyright' ]
+let g:coc_global_extensions = ['coc-tsserver', 'coc-clangd', 'coc-html', 'coc-css', 'coc-rust-analyzer', 'coc-pyright', 'coc-hls' ]
