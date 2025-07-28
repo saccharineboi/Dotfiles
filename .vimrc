@@ -57,7 +57,6 @@ set tags=~/.tags
 " theme
 syntax enable
 colorscheme dracula
-let g:airline_theme='dracula'
 set bg=dark
 hi Normal guibg=NONE ctermbg=NONE
 set cursorline
@@ -65,12 +64,14 @@ hi CursorLine ctermfg=None ctermbg=Black cterm=bold
 hi CursorLineNr ctermfg=None ctermbg=Black cterm=bold
 hi StatusLine ctermfg=White ctermbg=Black cterm=bold
 
-" Enable GDB debugging
-packadd! termdebug
-let g:termdebug_config = {}
-let g:termdebug_config['winbar'] = 0
-let g:termdebug_config['evaluate_in_popup'] = v:true
-let g:termdebug_config['wide'] = 1
+" airline config
+let g:airline_theme='dracula'
+let g:airline#extensions#coc#enabled = 1
+let g:airline#extensions#coc#error_symbol = 'E:'
+let g:airline#extensions#coc#warning_symbol = 'W:'
+let g:airline#extensions#coc#show_coc_status = 1
+let g:airline#extensions#coc#stl_format_err = '%C(L%L)'
+let g:airline#extensions#coc#stl_format_warn = '%C(L%L)'
 
 " switch buffers using shift and tab
 nnoremap <silent> <tab> :call <SID>CycleBuffer(1)<CR>
@@ -145,28 +146,17 @@ set updatetime=300
 " diagnostics appear/become resolved
 set signcolumn=yes
 
-" Use tab for trigger completion with characters ahead and navigate
-" NOTE: There's always complete item selected by default, you may want to enable
-" no select by `"suggest.noselect": true` in your configuration file
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other plugin before putting this into your config
-inoremap <silent><expr> <TAB>
-      \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+" This is necessary for VimTeX to load properly.
+filetype plugin indent on
 
-" Make <CR> to accept selected completion item or notify coc.nvim to format
-" <C-g>u breaks current undo, please make your own choice
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+" PDF viewer
+let g:vimtex_view_general_viewer = 'okular'
+let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 
-function! CheckBackspace() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
+" LaTeX compiler backend
+let g:vimtex_compiler_method = 'latexrun'
 
-" Use <c-space> to trigger completion
+" Use <c-space> to trigger completion (<c-2> in vim)
 if has('nvim')
   inoremap <silent><expr> <c-space> coc#refresh()
 else
@@ -291,4 +281,4 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
-let g:coc_global_extensions = ['coc-tsserver', 'coc-clangd', 'coc-html', 'coc-css', 'coc-rust-analyzer', 'coc-pyright', 'coc-hls' ]
+let g:coc_global_extensions = ['coc-tsserver', 'coc-clangd', 'coc-html', 'coc-css', 'coc-rust-analyzer', 'coc-pyright', 'coc-hls', 'coc-json', 'coc-vimtex' ]
