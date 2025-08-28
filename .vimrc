@@ -146,15 +146,22 @@ set updatetime=300
 " diagnostics appear/become resolved
 set signcolumn=yes
 
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo, please make your own choice
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
 " This is necessary for VimTeX to load properly.
-filetype plugin indent on
+filetype on
+filetype plugin on
+filetype indent on
 
 " PDF viewer
 let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 
 " LaTeX compiler backend
-let g:vimtex_compiler_method = 'latexrun'
+let g:vimtex_compiler_method = 'latexmk'
 
 " Use <c-space> to trigger completion (<c-2> in vim)
 if has('nvim')
@@ -281,4 +288,25 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
-let g:coc_global_extensions = ['coc-tsserver', 'coc-clangd', 'coc-html', 'coc-css', 'coc-rust-analyzer', 'coc-pyright', 'coc-hls', 'coc-json', 'coc-vimtex' ]
+let g:coc_global_extensions = ['coc-tsserver',
+                             \ 'coc-clangd',
+                             \ 'coc-html',
+                             \ 'coc-css',
+                             \ 'coc-rust-analyzer',
+                             \ 'coc-pyright',
+                             \ 'coc-hls',
+                             \ 'coc-json',
+                             \ 'coc-wgsl-analyzer',
+                             \ 'coc-vimtex' ]
+
+
+let g:llama_config = {
+\     'show_info': 0,
+\     'keymap_trigger': '<C-T>',
+\     'keymap_accept_full': '<C-N>',
+\     'keymap_accept_line': '<C-L>',
+\     'keymap_accept_word': '<C-S-L>'
+\ }
+
+set spell
+set spelllang=en_us
