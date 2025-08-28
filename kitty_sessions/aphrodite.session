@@ -1,0 +1,21 @@
+os_window_state maximized
+
+new_tab
+title Aphrodite Server
+cd ~/Desktop/Aphrodite
+launch npm start
+
+new_tab
+title Aphrodite Root
+cd ~/Desktop/Aphrodite
+launch bash
+
+new_tab
+title Aphrodite Source
+cd ~/Desktop/Aphrodite
+launch vim -S Session.vim
+
+new_tab
+title Aphrodite Shaders
+cd ~/Desktop/Aphrodite/shaders
+launch vim -S Session.vim
