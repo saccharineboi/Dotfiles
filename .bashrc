@@ -67,9 +67,6 @@ alias make='make -j4'
 # update tags file
 alias update-tags="ctags -o $HOME/.tags -R /usr/include /usr/local/include"
 
-# enable dark mode in QT apps
-export QT_STYLE_OVERRIDE=Breeze
-
 # renderdoc stuff
 export ENABLE_VULKAN_RENDERDOC_CAPTURE=0
 export RENDERDOC_HOOK_EGL=0
