@@ -1,0 +1,11 @@
+os_window_state maximized
+
+new_tab
+title e954 Server
+cd ~/Desktop/e954.dev
+launch npm start
+
+new_tab
+title e954 Root
+cd ~/Desktop/e954.dev
+launch bash
