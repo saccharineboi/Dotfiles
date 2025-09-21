@@ -3,7 +3,7 @@ os_window_state maximized
 new_tab
 title e954 Server
 cd ~/Desktop/e954.dev
-launch npm start
+launch hugo server -D
 
 new_tab
 title e954 Root
